@@ -28,6 +28,13 @@ function sumToN(n) {
   //   return sumToN(n - 1) + n;
   //   }
 
+  // sumtoN(3) ==> func(2) + 3
+  // sumtoN(2) ==> func(1) + 2
+  // sumtoN(1) ==> func(0) + 1
+  // sumtoN(0) ==> return null
+  // sumtoN(1) ==> null + 1 = 1
+  // sumtoN(2) ==> 1 + 2 = 3
+  // sumtoN(3) ==> 3 + 3 = 6 === RETURN VALUE 6
 
 console.log(sumToN(5)) // returns 15
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
