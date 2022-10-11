@@ -11,9 +11,17 @@ sumArray([1, 2, 3, 4, 5]); // 15
 ***********************************************************************/
 
 function sumArray(arr) {
-  // Your code here
-}
-  
+  if (arr.length === 0) return null;
+  debugger
+  const first = arr[0];
+  debugger
+  const result = sumArray(arr.slice(1));
+  debugger
+  return first + result
+ }
+console.log(sumArray([1, 2, 3])); //  6
+console.log(sumArray([0, 1, -3])); //  -2
+console.log(sumArray([1, 2, 3, 4, 5])); // 15
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = sumArray;
