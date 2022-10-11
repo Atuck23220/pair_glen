@@ -10,12 +10,20 @@ range(3, 4); // [3]
 range(7, 6); // []
 ***********************************************************************/
 
+//const { getNewLibraryCopy } = require("cypress/types/bluebird");
 
-function range(start, end) {
-  // Your code here
+
+function range(start, end, newArr = []) {
+  if (end < start) return [];
+  if (start === end) return newArr
+
+   newArr.push(start)
+  return range(start + 1, end, newArr)
 }
 
-
+console.log(range(1, 5)); // [1, 2, 3, 4]
+console.log(range(3, 4)); // [3]
+console.log(range(7, 6)); // []
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = range;
